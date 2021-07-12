@@ -24,7 +24,7 @@
 
 /* Select all the airports that airlines 'Germania' flies from. */
 
-# SELECT airports.name FROM routes, airlines, airports
+# SELECT DISTINCT airports.name FROM routes, airlines, airports
  > WHERE airlines.id = routes.airline_id
  > AND routes.origin_code = airports.iata_faa
  > AND airlines.name = 'Germania';
